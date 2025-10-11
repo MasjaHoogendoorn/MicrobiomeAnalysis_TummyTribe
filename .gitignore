@@ -209,3 +209,4 @@ __marimo__/
 
 # Ignore large or raw data files
 data/raw/
+data/processed/
