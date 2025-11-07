@@ -208,5 +208,4 @@ __marimo__/
 
 
 # Ignore large or raw data files
-# data/**/*.qza # ignore just all QIIME2 artifacts
-data_to_delete/
+data/**/*.qza # ignore just all QIIME2 artifacts
