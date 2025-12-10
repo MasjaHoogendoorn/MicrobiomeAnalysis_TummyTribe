@@ -10,10 +10,10 @@
 cd $SCRATCH
 
 # paths 
-data_dir=/lnieba/microbiomes/phylogeny
+data_dir=/lnieba/microbiomes
 
 qiime fragment-insertion sepp \
-  --i-representative-sequences $data_dir/dada2_rep_seq.qza \
+  --i-representative-sequences $data_dir/dada2_rep_seq_filtered.qza \
   --i-reference-database $data_dir/silva-128-sepp-refs.qza \
   --p-threads 4 \
   --o-tree $data_dir/sepp-tree.qza \
