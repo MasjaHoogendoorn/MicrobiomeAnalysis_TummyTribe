@@ -14,7 +14,14 @@ conda activate microbiomes
 
 # Navigate to the directory for all the data
 cd "/cluster/scratch/jfrank/taxonomy" || { echo "Directory not found"; exit 1; }
-# 1. Download Silva reference (RNA) --> done on jupyterhub and uploaded on euler
+
+# 1. Download Silva reference (RNA) 
+# Please do this step on the login node, otherwise it won’t give you permission to download the data
+# qiime rescript get-silva-data \
+#     --p-version '138.2' \
+#     --p-target 'SSURef_NR99' \
+#     --o-silva-sequences silva-138.2-ssu-nr99-rna-seqs.qza \
+#     --o-silva-taxonomy silva-138.2-ssu-nr99-tax.qza
 # 2. Reverse transcribe the RNA into DNA
 qiime rescript reverse-transcribe \
     --i-rna-sequences silva-138.2-ssu-nr99-rna-seqs.qza \
@@ -58,5 +65,12 @@ qiime feature-classifier fit-classifier-naive-bayes \
     --i-reference-reads silva-138.2-ssu-nr99-seqs-515f-806r-uniq.qza \
     --i-reference-taxonomy silva-138.2-ssu-nr99-tax-515f-806r-derep-uniq.qza \
     --o-classifier silva-138.2-ssu-nr99-515f-806r-classifier.qza
+# 9.  Evaluate the classifier
+qiime rescript evaluate-fit-classifier \
+  --i-sequences silva-138.2-ssu-nr99-seqs-515f-806r-uniq.qza \
+  --i-taxonomy silva-138.2-ssu-nr99-tax-515f-806r-derep-uniq.qza \
+  --o-classifier silva-138.2-ssu-nr99-515f-806r-fit-classifier.qza \
+  --o-observed-taxonomy silva-138.2-ssu-nr99-515f-806r-predicted-taxonomy.qza \
+  --o-evaluation silva-138.2-ssu-nr99-515f-806r-fit-classifier-evaluation.qzv
 echo "fully executed!"
 
