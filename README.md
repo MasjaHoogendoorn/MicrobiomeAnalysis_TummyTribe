@@ -27,7 +27,7 @@ The notebooks are structured as follows:
 - 10 functional profiling part 2
 
 ## Repository structure
-The scripts folder contains the main analysis notebooks. The scripts/additional folder contains helper scripts, including Euler and HPC scripts referenced in the notebooks. The doc folder contains the final written report. For the rest, all directories are made by the notebooks during analysis.
+The scripts folder contains the main analysis notebooks. The scripts/additional folder contains additional code, including a notebook on classification using machine learning and HPC scripts referenced in the notebooks. The doc folder contains the final written report. For the rest, all directories are made by the notebooks during analysis.
 
 ## Key findings (summary)
 Age was the strongest driver of gut microbiome change, with increasing diversity and enrichment of anaerobic taxa such as Blautia, Roseburia, and Thomasclavelia. Feeding type and geographic location were associated with differences in community structure and core microbiota composition, while treatment exposure showed more limited effects. Breast-fed and formula-fed infants shared a large early-life core microbiota, with a small number of diet-specific core genera.
