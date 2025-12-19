@@ -1,4 +1,4 @@
-# Infant Gut Microbiome Analysis (DIABIMMUNE subset)
+# Infant Gut Microbiome Analysis (TummyTribe)
 
 This repository contains a reproducible analysis pipeline for studying early-life gut microbiome development using longitudinal 16S rRNA gene amplicon sequencing data from a subset of the DIABIMMUNE cohort. The project focuses on microbiome changes between 4, 7, and 10 months of age and evaluates the influence of feeding type, geographic location, and treatment exposure.
 
