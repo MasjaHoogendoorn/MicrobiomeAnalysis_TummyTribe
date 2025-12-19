@@ -23,9 +23,8 @@ The notebooks are structured as follows:
 - 06 longitudinal analysis
 - 07 differential abundance analysis
 - 08 core microbiota analysis
-- 09 classification (exploratory, not used in final results)
-- 10 functional profiling part 1
-- 11 functional profiling part 2
+- 09 functional profiling part 1
+- 10 functional profiling part 2
 
 ## Repository structure
 The scripts folder contains the main analysis notebooks. The scripts/additional folder contains helper scripts, including Euler and HPC scripts referenced in the notebooks. The doc folder contains the final written report. For the rest, all directories are made by the notebooks during analysis.
